@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+- feat: Add Facets as `FacetsInput` where args on `RootQuery` connections to post types.
+- feat!: Change `Facet.type` from type `String` to type `FacetTypeEnum`.
+
 ## v0.5.1
 
 This _minor_ release bumps the `tested up to` tags for WordPress v6.7.2 and WPGraphQL v2.0.
