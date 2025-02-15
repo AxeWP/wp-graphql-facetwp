@@ -26,8 +26,6 @@ parameters:
 			analyse:
 				- vendor-prefixed
 				- vendor
-			analyseAndScan:
-				- ../wp-graphql/tests
 		scanDirectories:
 			- ../wp-graphql/
 			- ../facetwp/
