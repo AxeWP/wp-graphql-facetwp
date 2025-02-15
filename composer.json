@@ -21,9 +21,9 @@
 	],
 	"support": {
 		"email": "support@axepress.dev",
-		"issues": "https://github.com/hsimah-services/wp-graphql-facetwp/issues",
-		"forum": "https://github.com/hsimah-services/wp-graphql-facetwp/discussions",
-		"source": "https://github.com/hsimah-services/wp-graphql-facetwp"
+		"issues": "https://github.com/AxeWP/wp-graphql-facetwp/issues",
+		"forum": "https://github.com/AxeWP/wp-graphql-facetwp/discussions",
+		"source": "https://github.com/AxeWP/wp-graphql-facetwp"
 	},
 	"readme": "README.md",
 	"funding": [
@@ -103,7 +103,7 @@
 		"install-stan-env": "bash bin/install-stan-env.sh",
 		"docker-build": "bash bin/run-docker.sh build",
 		"docker-run": "bash bin/run-docker.sh run",
-		"docker-destroy": "docker-compose down",
+		"docker-destroy": "docker compose down",
 		"build-and-run": [
 			"@docker-build",
 			"@docker-run"
