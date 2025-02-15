@@ -16,9 +16,22 @@
  */
 class FacetWP {}
 
+class FacetWP_API_Fetch {}
+class FacetWP_Helper {}
+class FacetWP_Renderer {}
+class FacetWP_Settings {}
+class FacetWP_Diff {}
+class FacetWP_Indexer {}
+class FacetWP_Display {}
+class FacetWP_Builder {}
+class FacetWP_Requext {}
+class FacetWP_Ajax {}
+
 /**
  * Returns the PHPStan instance.
  *
  * @return \FacetWP
  */
 function FWP() {}
+
+
