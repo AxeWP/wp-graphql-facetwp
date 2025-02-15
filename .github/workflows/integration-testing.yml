@@ -31,10 +31,10 @@ jobs:
     strategy:
       matrix:
         php: ["8.2", "8.1", "8.0"]
-        wordpress: ["6.5", "6.4", "6.3", "6.2", "6.1", "6.0", "5.9" ]
+        wordpress: ["6.7", "6.6", "6.5", "6.4", "6.3", "6.2", "6.1", "6.0", "5.9" ]
         include:
           - php: "8.2"
-            wordpress: "6.5"
+            wordpress: "6.7"
             coverage: 1
           # Test old versions against PHP 8.0
           - php: "7.4"
@@ -52,6 +52,10 @@ jobs:
           - php: "8.1"
             wordpress: "5.9"
           # New WP versions that dont support older PHP versions
+          - php: "8.0"
+            wordpress: "6.7"
+          - php: "8.0"
+            wordpress: "6.6"
           - php: "8.0"
             wordpress: "6.5"
       fail-fast: false
