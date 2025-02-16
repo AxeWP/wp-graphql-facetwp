@@ -1,12 +1,8 @@
 parameters:
 		level: 8
-		checkAlwaysTrueCheckTypeFunctionCall: true
-		checkAlwaysTrueInstanceof: true
-		checkAlwaysTrueStrictComparison: true
 		checkExplicitMixedMissingReturn: true
 		checkFunctionNameCase: true
 		checkInternalClassCaseSensitivity: true
-		checkMissingIterableValueType: true
 		checkTooWideReturnTypesInProtectedAndPublicMethods: true
 		inferPrivatePropertyTypeFromConstructor: true
 		polluteScopeWithAlwaysIterableForeach: false
@@ -15,8 +11,6 @@ parameters:
 		reportStaticMethodSignatures: true
 		reportWrongPhpDocTypeInVarTag: true
 		treatPhpDocTypesAsCertain: false
-		featureToggles:
-			disableRuntimeReflectionProvider: true
 		stubFiles:
 			# Simulate added properties
 			- phpstan/class-facetwp.php
@@ -31,8 +25,7 @@ parameters:
 		excludePaths:
 			analyse:
 				- vendor-prefixed
-			analyseAndScan:
-				- ../wp-graphql/tests
+				- vendor
 		scanDirectories:
 			- ../wp-graphql/
 			- ../facetwp/

@@ -63,7 +63,7 @@ class Autoloader {
 		// Translators: %s is a link to the latest release file.
 		$error_message = __( 'WPGraphQL for FacetWP: The Composer autoloader was not found. This usually means you downloaded the repository source code instead of the latest %s release file. If you are intentionally using the GitHub source code, make sure to run `composer install`.', 'wpgraphql-facetwp' );
 
-		$release_link = '<a href="https://github.com/hsimah-services/wp-graphql-facetwp/releases/latest/download/wp-graphql-facetwp.zip" target="_blank">wp-graphql-facetwp.zip</a>';
+		$release_link = '<a href="https://github.com/AxeWP/wp-graphql-facetwp/releases/latest/download/wp-graphql-facetwp.zip" target="_blank">wp-graphql-facetwp.zip</a>';
 
 		if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
 			error_log( // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log -- This is a development notice.

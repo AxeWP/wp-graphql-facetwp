@@ -21,9 +21,9 @@
 	],
 	"support": {
 		"email": "support@axepress.dev",
-		"issues": "https://github.com/hsimah-services/wp-graphql-facetwp/issues",
-		"forum": "https://github.com/hsimah-services/wp-graphql-facetwp/discussions",
-		"source": "https://github.com/hsimah-services/wp-graphql-facetwp"
+		"issues": "https://github.com/AxeWP/wp-graphql-facetwp/issues",
+		"forum": "https://github.com/AxeWP/wp-graphql-facetwp/discussions",
+		"source": "https://github.com/AxeWP/wp-graphql-facetwp"
 	},
 	"readme": "README.md",
 	"funding": [
@@ -88,12 +88,12 @@
 		"codeception/phpunit-wrapper": "^9.0",
 		"codeception/util-universalframework": "^1.0",
 		"lucatume/wp-browser": "<3.5",
-		"phpstan/phpstan": "^1.8",
+		"phpstan/phpstan": "^2.0.0",
 		"phpstan/extension-installer": "^1.1",
-		"szepeviktor/phpstan-wordpress": "^1.1",
-		"wp-graphql/wp-graphql-testcase": "~3.3.0",
-		"axepress/wp-graphql-stubs": "^1.13",
-		"axepress/wp-graphql-cs": "^2.0.0-beta",
+		"szepeviktor/phpstan-wordpress": "^2.0.0",
+		"wp-graphql/wp-graphql-testcase": "~3.4.0",
+		"axepress/wp-graphql-stubs": "^2.0.0",
+		"axepress/wp-graphql-cs": "^2.0.0",
 		"wp-cli/wp-cli-bundle": "^2.8.1",
 		"php-coveralls/php-coveralls": "^2.5",
 		"phpcompatibility/php-compatibility": "dev-develop as 9.99.99"
@@ -103,7 +103,7 @@
 		"install-stan-env": "bash bin/install-stan-env.sh",
 		"docker-build": "bash bin/run-docker.sh build",
 		"docker-run": "bash bin/run-docker.sh run",
-		"docker-destroy": "docker-compose down",
+		"docker-destroy": "docker compose down",
 		"build-and-run": [
 			"@docker-build",
 			"@docker-run"

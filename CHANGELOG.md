@@ -4,7 +4,9 @@
 
 - chore!: Remove `vendor` and `vendor-prefixed/*` from the GitHub repository.
 - chore: Update Strauss to v0.19.1 and Composer dependencies.
+- chore: Update repository URLs to `https://github.com/AxeWP/wp-graphql-facetwp`.
 - ci: Cleanup zip and release workflow.
+- ci: Use `docker compose` instead of `docker-compose`.
 
 ## v0.5.0
 

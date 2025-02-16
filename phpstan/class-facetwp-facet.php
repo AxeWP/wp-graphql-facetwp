@@ -4,6 +4,6 @@
  * FacetWP
  *
  * @property string $label The facet label.
- * @property array  $fields The facet settings fields.
+ * @property array<mixed> $fields The facet settings fields.
  */
 class FacetWP_Facet {}
