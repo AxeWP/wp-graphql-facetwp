@@ -26,9 +26,7 @@ auth.json
 
 # Composer deps
 vendor
-!vendor-prefixed
-vendor/*
-!vendor-prefixed/.gitkeep
+vendor-prefixed
 
 # NPM deps
 node_modules

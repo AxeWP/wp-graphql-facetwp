@@ -49,11 +49,15 @@
 			"namespace_prefix": "WPGraphQL\\FacetWP\\Vendor\\",
 			"classmap_prefix": "GraphQL_FacetWP_Vendor",
 			"constant_prefix": "GRAPHQL_FACETWP_VENDOR_",
+			"delete_vendor_packages": true,
+			"include_modified_date": false,
 			"packages": [
 				"axepress/wp-graphql-plugin-boilerplate"
 			],
-			"delete_vendor_packages": true,
-			"include_modified_date": false
+			"exclude_from_prefix": {
+				"namespaces": [],
+				"file_patterns": []
+			}
 		}
 	},
 	"autoload": {
@@ -113,12 +117,18 @@
 		"run-app": "@docker-run -a",
 		"run-test": "@docker-run -t",
 		"strauss-install": [
-			"test -f ./bin/strauss.phar || curl -o bin/strauss.phar -L -C - https://github.com/BrianHenryIE/strauss/releases/download/0.19.1/strauss.phar"
+			"test -f ./bin/strauss.phar || curl -o bin/strauss.phar -L -C - https://github.com/BrianHenryIE/strauss/releases/download/0.19.4/strauss.phar"
 		],
 		"strauss": [
 			"@strauss-install",
 			"@php bin/strauss.phar",
 			"composer dump-autoload --optimize"
+		],
+		"pre-install-cmd": [
+			"test -d vendor-prefixed || mkdir vendor-prefixed"
+		],
+		"pre-update-cmd": [
+			"@pre-install-cmd"
 		],
 		"post-install-cmd": [
 			"@strauss"
