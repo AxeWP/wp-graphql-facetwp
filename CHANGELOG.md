@@ -6,15 +6,14 @@
 
 This _minor_ release bumps the `tested up to` tags for WordPress v6.7.2 and WPGraphQL v2.0.
 
-It's also the first release in the new repository location at https://github.com/AxeWP/wp-graphql-facetwp. should allow @justlevine to allocate significantly more resources to the plugin. Thanks @hsimah for your stewardship and hospitality 🙏.
+It's also the first release in the new repository location at https://github.com/AxeWP/wp-graphql-facetwp, a change which should allow @justlevine to allocate significantly more resources to the plugin. Thanks @hsimah for your stewardship and hospitality 🙏.
+
+
 
 > [!IMPORTANT]
-> Plugin dependencies are no longer version controlled, and are instead built during release.
-> 
-> For those not using a package manager, you should now download the `wp-graphql-facetwp.php` from the [latest GitHub Release page](https://github.com/AxeWP/wp-graphql-facetwp/releases/latest).
+> Vendor files are now .gitignored and must be built locally (`composer install`) for the plugin source code to work.
 >
-> If you are using Composer, you can continue to install the plugin using `composer require hsimah-services/wp-graphql-facetwp`.
-
+> Users should download the release version of wp-graphql-facetwp.zip provided on the [latest GitHub Release page](https://github.com/AxeWP/wp-graphql-facetwp/releases/latest) and _not_ the source code zip file.
 
 - chore!: Remove `vendor` and `vendor-prefixed/*` from the GitHub repository.
 - chore: Test compatibility with WordPress 6.7.2.

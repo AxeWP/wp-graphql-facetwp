@@ -148,13 +148,13 @@
 		],
 		"phpstan": [
 			"vendor/bin/phpstan analyze --ansi --memory-limit=1G"
+		],
+		"zip": [
+			"composer install --no-dev --optimize-autoloader",
+			"mkdir -p plugin-build/wp-graphql-facetwp",
+			"rsync -rc --exclude-from=.distignore --exclude=plugin-build . plugin-build/wp-graphql-facetwp/ --delete --delete-excluded -v",
+			"cd plugin-build ; zip -r wp-graphql-facetwp.zip wp-graphql-facetwp",
+			"rm -rf plugin-build/wp-graphql-facetwp/"
 		]
-	},
-	"zip": [
-		"composer install --no-dev --optimize-autoloader",
-		"mkdir -p plugin-build/wp-graphql-facetwp",
-		"rsync -rc --exclude-from=.distignore --exclude=plugin-build . plugin-build/wp-graphql-facetwp/ --delete --delete-excluded -v",
-		"cd plugin-build ; zip -r wp-graphql-facetwp.zip wp-graphql-facetwp",
-		"rm -rf plugin-build/wp-graphql-facetwp/"
-	]
+	}
 }
