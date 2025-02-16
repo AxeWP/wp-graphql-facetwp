@@ -8,8 +8,9 @@
 
 namespace WPGraphQL\FacetWP\Type\Input;
 
-use GraphQL\Error\UserError;
 use WPGraphQL;
+use WPGraphQL\AppContext;
+use WPGraphQL\FacetWP\Type\WPInterface\FacetConfig;
 use WPGraphQL\FacetWP\Vendor\AxeWP\GraphQL\Abstracts\InputType;
 
 /**
@@ -42,28 +43,56 @@ class FacetsInput extends InputType {
 					'description' => __( 'Filter by FacetWP facets.', 'wpgraphql-facetwp' ),
 				],
 			);
+
+			self::register_edge_field( $post_type_obj );
 		}
 	}
+
+	/**
+	 * Register the edge field for the connection.
+	 *
+	 * @param \WP_Post_Type $post_type_obj The post type object.
+	 */
+	public static function register_edge_field( \WP_Post_Type $post_type_obj ): void {
+		register_graphql_edge_field(
+			'RootQuery',
+			$post_type_obj->graphql_single_name,
+			'activeFacets',
+			[
+				'type'        => [ 'list_of' => FacetConfig::get_type_name() ],
+				'description' => __( 'The active facets on this connection', 'wpgraphql-facetwp' ),
+				'resolve'     => static function ( $source, array $args, AppContext $context ) {
+					$keys = array_keys( (array) $source );
+					foreach ( $keys as $key ) {
+						error_log( $key . ': ' . gettype( $source[ $key ] ) );
+					}
+					error_log( $source['node']::class );
+					error_log( $source['connection']::class );
+					error_log( print_r( $source['node'], true ) );
+					return [];
+				},
+			]
+		);
+	}
+
 	/**
 	 * {@inheritDoc}
 	 */
-	public static function type_name() : string {
+	public static function type_name(): string {
 		return 'FacetsInput';
 	}
 
 	/**
 	 * {@inheritDoc}
 	 */
-	public static function get_description() : string {
+	public static function get_description(): string {
 		return __( 'Input for filtering by FacetWP facets.', 'wpgraphql-facetwp' );
 	}
 
 	/**
 	 * {@inheritDoc}
-	 *
-	 * @return array
 	 */
-	public static function get_fields() : array {
+	public static function get_fields(): array {
 		$facet_configs = get_graphql_allowed_facets();
 		$fields        = [];
 
@@ -80,10 +109,10 @@ class FacetsInput extends InputType {
 					__( 'The %1$s facet.', 'wpgraphql-facetwp' ),
 					$config['label']
 				),
-				'type'        => $config['graphql_type'],
+				'type'        => (string) $config['graphql_type'],
 			];
 
-			$fields[ $config['graphql_field_name'] ] = $field_config;
+			$fields[ (string) $config['graphql_field_name'] ] = $field_config;
 		}
 
 		return $fields;
