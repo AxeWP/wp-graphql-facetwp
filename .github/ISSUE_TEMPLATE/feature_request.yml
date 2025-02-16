@@ -8,7 +8,7 @@ body:
 
 
         Please make sure to search the repo for [existing feature
-        requests](https://github.com/hsimah-services/wp-graphql-facetwp/issues)
+        requests](https://github.com/AxeWP/wp-graphql-facetwp/issues)
         before creating a new one.
   - type: textarea
     attributes:

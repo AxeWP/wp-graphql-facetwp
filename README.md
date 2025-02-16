@@ -3,14 +3,14 @@
 
 Adds WPGraphQL support for [FacetWP](https://facetwp.com/).
 
-* [Join the WPGraphQL community on Slack.](https://join.slack.com/t/wp-graphql/shared_invite/zt-3vloo60z-PpJV2PFIwEathWDOxCTTLA)
+* [Join the WPGraphQL community on Discord.](https://discord.gg/GyKncfmn7q)
 * [Documentation](#usage)
 -----
 
-![Packagist License](https://img.shields.io/packagist/l/hsimah-services/wp-graphql-facetwp?color=green) ![Packagist Version](https://img.shields.io/packagist/v/hsimah-services/wp-graphql-facetwp?label=stable) ![GitHub commits since latest release (by SemVer)](https://img.shields.io/github/commits-since/hsimah-services/wp-graphql-facetwp/0.5.0) ![GitHub forks](https://img.shields.io/github/forks/hsimah-services/wp-graphql-facetwp?style=social) ![GitHub Repo stars](https://img.shields.io/github/stars/hsimah-services/wp-graphql-facetwp?style=social)<br />
-![CodeQuality](https://img.shields.io/github/actions/workflow/status/hsimah-services/wp-graphql-facetwp/code-quality.yml?branch=develop&label=Code%20Quality)
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/hsimah-services/wp-graphql-facetwp/integration-testing.yml?branch=develop&label=Integration%20Testing)
-![Coding Standards](https://img.shields.io/github/actions/workflow/status/hsimah-services/wp-graphql-facetwp/code-standard.yml?branch=develop&label=WordPress%20Coding%20Standards)
+![Packagist License](https://img.shields.io/packagist/l/hsimah-services/wp-graphql-facetwp?color=green) ![Packagist Version](https://img.shields.io/packagist/v/hsimah-services/wp-graphql-facetwp?label=stable) ![GitHub commits since latest release (by SemVer)](https://img.shields.io/github/commits-since/AxeWP/wp-graphql-facetwp/0.5.0) ![GitHub forks](https://img.shields.io/github/forks/AxeWP/wp-graphql-facetwp?style=social) ![GitHub Repo stars](https://img.shields.io/github/stars/AxeWP/wp-graphql-facetwp?style=social)<br />
+![CodeQuality](https://img.shields.io/github/actions/workflow/status/AxeWP/wp-graphql-facetwp/code-quality.yml?branch=develop&label=Code%20Quality)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/AxeWP/wp-graphql-facetwp/integration-testing.yml?branch=develop&label=Integration%20Testing)
+![Coding Standards](https://img.shields.io/github/actions/workflow/status/AxeWP/wp-graphql-facetwp/code-standard.yml?branch=develop&label=WordPress%20Coding%20Standards)
 
 -----
 ## Overview
@@ -30,11 +30,11 @@ This plugin has been tested and is functional with SearchWP.
 
 1. Install & activate [WPGraphQL](https://www.wpgraphql.com/).
 2. Install & activate [FacetWP](https://facetwp.com/).
-3. Download the `wp-graphql-facetwp.zip` file from the [latest release](https://github.com/hsimah-services/wp-graphql-facetwp/releases/latest) upload it to your WordPress install, and activate the plugin.
+3. Download the `wp-graphql-facetwp.zip` file from the [latest release](https://github.com/AxeWP/wp-graphql-facetwp/releases/latest) upload it to your WordPress install, and activate the plugin.
 
 > [!IMPORTANT]
 >
-> Make sure you are downloading the [`wp-graphql-facetwp.zip`](https://github.com/hsimah-services/wp-graphql-facetwp/releases/latest/download/wp-graphql-facetwp.zip) file from the releases page, not the `Source code (zip)` file nor a clone of the repository.
+> Make sure you are downloading the [`wp-graphql-facetwp.zip`](https://github.com/AxeWP/wp-graphql-facetwp/releases/latest/download/wp-graphql-facetwp.zip) file from the releases page, not the `Source code (zip)` file nor a clone of the repository.
 >
 > If you wish to use the source code, you will need to run `composer install` inside the plugin folder to install the required dependencies.
 
@@ -55,9 +55,11 @@ Until we hit v1.0, we're using a modified version of [SemVer](https://semver.org
 
 ## Development and Support
 
-WPGraphQL for FacetWP was initially created by [Hamish Blake](https://www.hsimah.com/). Maintainance and development are now provided by [AxePress Development](https://axepress.dev/). Community contributions are _welcome_ and **encouraged**.
+WPGraphQL for FacetWP was initially created by [Hamish Blake](https://www.hsimah.com/). Maintainance and development are now provided by [AxePress Development](https://axepress.dev/). On 15 February 2025, the repository was transferred from https://github.com/hsimah-services to https://github.com/AxeWP/wp-graphql-facetwp.
 
-Basic support is provided for free, both in [this repo](https://github.com/hsimah-services/wp-graphql-facetwp/issues) and at the `#facetwp` channel in [WPGraphQL Slack](https://join.slack.com/t/wp-graphql/shared_invite/zt-3vloo60z-PpJV2PFIwEathWDOxCTTLA).
+Community contributions are _welcome_ and **encouraged**.
+
+Basic support is provided for free, both in [this repo](https://github.com/AxeWP/wp-graphql-facetwp/issues) and at the `#facetwp` channel in [WPGraphQL Discord](https://discord.gg/GyKncfmn7q).
 
 Priority support and custom development is available to [AxePress Development sponsors](https://github.com/sponsors/AxeWP).
 

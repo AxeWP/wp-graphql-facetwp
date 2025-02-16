@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: WPGraphQL for FacetWP
- * Plugin URI: https://github.com/hsimah-services/wp-graphql-facetwp
+ * Plugin URI: https://github.com/AxeWP/wp-graphql-facetwp
  * Description: Adds FacetWP support to WPGraphQL
  * Author: hsimah, justlevine
  * Author URI: http://www.hsimah.com

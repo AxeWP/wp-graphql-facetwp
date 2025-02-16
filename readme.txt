@@ -5,12 +5,12 @@ Requires at least: 5.4.1
 Requires PHP: 7.4
 Tested up to: 6.7.2
 Stable tag: 0.5.0
-Maintained at: https://github.com/hsimah-services/wp-graphql-facetwp
+Maintained at: https://github.com/AxeWP/wp-graphql-facetwp
 License: GPL-3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
-Adds FacetWP support to the WPGraphQL. For more information, see [README.md](https://github.com/hsimah-services/wp-graphql-facetwp/blob/main/README.md)
+Adds FacetWP support to the WPGraphQL. For more information, see [README.md](https://github.com/AxeWP/wp-graphql-facetwp/blob/main/README.md)
 
 == Upgrade Notice == 
 == Frequently Asked Questions ==
@@ -18,4 +18,4 @@ Adds FacetWP support to the WPGraphQL. For more information, see [README.md](htt
 
 == Changelog ==
 **WARNING**: This release _may_ have breaking changes. Please review the release notes before updating.
-[Release Notes](https://github.com/hsimah-services/wp-graphql-facetwp/releases)
+[Release Notes](https://github.com/AxeWP/wp-graphql-facetwp/releases)
