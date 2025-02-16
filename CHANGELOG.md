@@ -2,9 +2,26 @@
 
 ## [Unreleased]
 
+## v0.5.1
+
+This _minor_ release bumps the `tested up to` tags for WordPress v6.7.2 and WPGraphQL v2.0.
+
+It's also the first release in the new repository location at https://github.com/AxeWP/wp-graphql-facetwp. should allow @justlevine to allocate significantly more resources to the plugin. Thanks @hsimah for your stewardship and hospitality 🙏.
+
+> [!IMPORTANT]
+> Plugin dependencies are no longer version controlled, and are instead built during release.
+> 
+> For those not using a package manager, you should now download the `wp-graphql-facetwp.php` from the [latest GitHub Release page](https://github.com/AxeWP/wp-graphql-facetwp/releases/latest).
+>
+> If you are using Composer, you can continue to install the plugin using `composer require hsimah-services/wp-graphql-facetwp`.
+
+
 - chore!: Remove `vendor` and `vendor-prefixed/*` from the GitHub repository.
-- chore: Update Strauss to v0.19.4 and Composer dependencies.
-- chore: Update repository URLs to `https://github.com/AxeWP/wp-graphql-facetwp`.
+- chore: Test compatibility with WordPress 6.7.2.
+- chore: Test compatibility with WPGraphQL 2.0.
+- chore: Update Strauss to v0.19.1.
+- chore: Update composer dependencies.
+- chore: Update repository URLs to `https://github.com/AxeWP/wp-graphql-facetwp`. H/t @hsimah
 - ci: Cleanup zip and release workflow.
 - ci: Use `docker compose` instead of `docker-compose`.
 
@@ -46,7 +63,7 @@ This _minor_ release adds support for the [Sort Facet](https://facetwp.com/help-
 
 ## v0.4.2
 
-This _minor_ release lays the groundwork for the upcoming Facet autoregistration / official Sort Facet support. It introduces a new `FacetConfig` interface, which is implemented by the `Facet` object. Additionally, we adopted the use of WPGraphQL Plugin Boilerplate to scaffold our PHP classes, updated our Composer dev dependencies, and started testing against WordPress 6.2 and running WPUnit tests as part of our CI workflow.
+This _minor_ release lays the groundwork for the upcoming Facet auto-registration / official Sort Facet support. It introduces a new `FacetConfig` interface, which is implemented by the `Facet` object. Additionally, we adopted the use of WPGraphQL Plugin Boilerplate to scaffold our PHP classes, updated our Composer dev dependencies, and started testing against WordPress 6.2 and running WPUnit tests as part of our CI workflow.
 
 - feat: Change `Facet` object to implement new `FacetConfig` interface.
 - fix: Add missing descriptions to GraphQL types.
