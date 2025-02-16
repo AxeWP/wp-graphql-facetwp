@@ -49,11 +49,15 @@
 			"namespace_prefix": "WPGraphQL\\FacetWP\\Vendor\\",
 			"classmap_prefix": "GraphQL_FacetWP_Vendor",
 			"constant_prefix": "GRAPHQL_FACETWP_VENDOR_",
+			"delete_vendor_packages": true,
+			"include_modified_date": false,
 			"packages": [
 				"axepress/wp-graphql-plugin-boilerplate"
 			],
-			"delete_vendor_packages": true,
-			"include_modified_date": false
+			"exclude_from_prefix": {
+				"namespaces": [],
+				"file_patterns": []
+			}
 		}
 	},
 	"autoload": {
@@ -119,6 +123,12 @@
 			"@strauss-install",
 			"@php bin/strauss.phar",
 			"composer dump-autoload --optimize"
+		],
+		"pre-install-cmd": [
+			"test -d vendor-prefixed || mkdir vendor-prefixed"
+		],
+		"pre-update-cmd": [
+			"@pre-install-cmd"
 		],
 		"post-install-cmd": [
 			"@strauss"
