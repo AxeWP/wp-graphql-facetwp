@@ -35,11 +35,11 @@ class FacetRangeSettings extends ObjectType {
 		return [
 			'max' => [
 				'type'        => 'Float',
-				'description' => __( 'Slider max value', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Slider max value', 'wpgraphql-facetwp' ),
 			],
 			'min' => [
 				'type'        => 'Float',
-				'description' => __( 'Slider min value', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Slider min value', 'wpgraphql-facetwp' ),
 			],
 		];
 	}

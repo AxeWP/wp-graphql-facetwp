@@ -36,19 +36,19 @@ class ProximityArgs extends InputType {
 		return [
 			'chosenRadius' => [
 				'type'        => ProximityRadiusOptions::get_type_name(),
-				'description' => __( 'The chosen radius from the location.', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'The chosen radius from the location.', 'wpgraphql-facetwp' ),
 			],
 			'latitude'     => [
 				'type'        => 'Float',
-				'description' => __( 'The latitude of the location.', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'The latitude of the location.', 'wpgraphql-facetwp' ),
 			],
 			'locationName' => [
 				'type'        => 'String',
-				'description' => __( 'The name of the location.', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'The name of the location.', 'wpgraphql-facetwp' ),
 			],
 			'longitude'    => [
 				'type'        => 'Float',
-				'description' => __( 'The longitude of the location.', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'The longitude of the location.', 'wpgraphql-facetwp' ),
 			],
 		];
 	}

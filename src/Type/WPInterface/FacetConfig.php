@@ -41,24 +41,24 @@ class FacetConfig extends InterfaceType {
 				'type'        => [
 					'list_of' => FacetChoice::get_type_name(),
 				],
-				'description' => __( 'Facet choices', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Facet choices', 'wpgraphql-facetwp' ),
 			],
 			'label'    => [
 				'type'        => 'String',
-				'description' => __( 'Facet label.', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Facet label.', 'wpgraphql-facetwp' ),
 			],
 			'name'     => [
 				'type'        => 'String',
-				'description' => __( 'Facet name.', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Facet name.', 'wpgraphql-facetwp' ),
 			],
 			'settings' => [
 				'type'        => FacetSettings::get_type_name(),
-				'description' => __( 'Facet settings', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Facet settings', 'wpgraphql-facetwp' ),
 			],
 			// @todo change to Enum
 			'type'     => [
 				'type'        => 'String',
-				'description' => __( 'Facet type', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Facet type', 'wpgraphql-facetwp' ),
 			],
 		];
 	}

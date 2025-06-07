@@ -35,27 +35,27 @@ class FacetChoice extends ObjectType {
 		return [
 			'count'    => [
 				'type'        => 'Int',
-				'description' => __( 'Count', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Count', 'wpgraphql-facetwp' ),
 			],
 			'depth'    => [
 				'type'        => 'Int',
-				'description' => __( 'Depth', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Depth', 'wpgraphql-facetwp' ),
 			],
 			'label'    => [
 				'type'        => 'String',
-				'description' => __( 'Taxonomy label or post title', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Taxonomy label or post title', 'wpgraphql-facetwp' ),
 			],
 			'parentId' => [
 				'type'        => 'Int',
-				'description' => __( 'Parent Term ID (Taxonomy choices only', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Parent Term ID (Taxonomy choices only', 'wpgraphql-facetwp' ),
 			],
 			'termId'   => [
 				'type'        => 'Int',
-				'description' => __( 'Term ID (Taxonomy choices only)', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Term ID (Taxonomy choices only)', 'wpgraphql-facetwp' ),
 			],
 			'value'    => [
 				'type'        => 'String',
-				'description' => __( 'Taxonomy value or post ID', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Taxonomy value or post ID', 'wpgraphql-facetwp' ),
 			],
 		];
 	}
