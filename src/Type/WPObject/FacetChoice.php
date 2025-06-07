@@ -47,7 +47,7 @@ class FacetChoice extends ObjectType {
 			],
 			'parentId' => [
 				'type'        => 'Int',
-				'description' => static fn () => __( 'Parent Term ID (Taxonomy choices only', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Parent Term ID (Taxonomy choices only)', 'wpgraphql-facetwp' ),
 			],
 			'termId'   => [
 				'type'        => 'Int',
