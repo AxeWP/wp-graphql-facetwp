@@ -4,7 +4,7 @@
 
 ## v0.5.2
 
-This _minor_ release release adds support for WPGraphQL 2.3's new lazy-loading features, and updates compatibility testing for the latest versions of WordPress, WPGraphQL, and FacetWP.
+This _minor_ release adds support for WPGraphQL 2.3's new lazy-loading features, and updates compatibility testing for the latest versions of WordPress, WPGraphQL, and FacetWP.
 
 - dev: Add support for lazy-loading GraphQL descriptions and deprecation messages.
 - chore: Update Strauss to v0.22.2.
