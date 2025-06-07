@@ -5,7 +5,7 @@
  * Description: Adds FacetWP support to WPGraphQL
  * Author: hsimah, justlevine
  * Author URI: http://www.hsimah.com
- * Version: 0.5.1
+ * Version: 0.5.2
  * Text Domain: wpgraphql-facetwp
  * Requires at least: 5.4.1
  * Tested up to: 6.8.1
@@ -47,7 +47,7 @@ if ( ! \WPGraphQL\FacetWP\Autoloader::autoload() ) {
 function constants(): void {
 		// Plugin version.
 	if ( ! defined( 'WPGRAPHQL_FACETWP_VERSION' ) ) {
-		define( 'WPGRAPHQL_FACETWP_VERSION', '0.5.1' );
+		define( 'WPGRAPHQL_FACETWP_VERSION', '0.5.2' );
 	}
 
 	// Plugin Folder Path.
