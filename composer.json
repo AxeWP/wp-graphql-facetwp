@@ -73,7 +73,8 @@
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"Tests\\WPGraphQL\\FacetWP\\": "tests/_support/"
+			"Tests\\WPGraphQL\\FacetWP\\Helper\\": "tests/_support/Helper",
+			"Tests\\WPGraphQL\\FacetWP\\TestCase\\": "tests/_support/TestCase"
 		}
 	},
 	"require": {
@@ -116,26 +117,6 @@
 		"build-test": "@docker-build -t",
 		"run-app": "@docker-run -a",
 		"run-test": "@docker-run -t",
-		"strauss-install": [
-			"test -f ./bin/strauss.phar || curl -o bin/strauss.phar -L -C - https://github.com/BrianHenryIE/strauss/releases/download/0.19.1/strauss.phar"
-		],
-		"strauss": [
-			"@strauss-install",
-			"@php bin/strauss.phar",
-			"composer dump-autoload --optimize"
-		],
-		"pre-install-cmd": [
-			"test -d vendor-prefixed || mkdir vendor-prefixed"
-		],
-		"pre-update-cmd": [
-			"@pre-install-cmd"
-		],
-		"post-install-cmd": [
-			"@strauss"
-		],
-		"post-update-cmd": [
-			"@strauss"
-		],
 		"lint": "vendor/bin/phpcs",
 		"phpcs-i": [
 			"php ./vendor/bin/phpcs -i"
@@ -148,6 +129,26 @@
 		],
 		"phpstan": [
 			"vendor/bin/phpstan analyze --ansi --memory-limit=1G"
+		],
+		"pre-prefix-namespaces": [
+			"test -d vendor-prefixed || mkdir vendor-prefixed",
+			"test -f ./bin/strauss.phar || curl -o bin/strauss.phar -L -C - https://github.com/BrianHenryIE/strauss/releases/download/0.22.2/strauss.phar"
+		],
+		"prefix-namespaces": [
+			"@php bin/strauss.phar",
+			"@composer dump-autoload"
+		],
+		"pre-install-cmd": [
+			"@pre-prefix-namespaces"
+		],
+		"pre-update-cmd": [
+			"@pre-install-cmd"
+		],
+		"post-install-cmd": [
+			"@prefix-namespaces"
+		],
+		"post-update-cmd": [
+			"@prefix-namespaces"
 		],
 		"zip": [
 			"composer install --no-dev --optimize-autoloader",

@@ -28,7 +28,6 @@ class AccessFunctionsTest extends FWPGraphQLTestCase {
 		parent::tearDown();
 	}
 
-
 	public function testRegisterGraphQLFacetType() {
 		// Create test data.
 		$term_one_id = $this->factory()->term->create(
@@ -298,5 +297,4 @@ class AccessFunctionsTest extends FWPGraphQLTestCase {
 		$this->assertTrue( $allowed_facets[1]['show_in_graphql'] );
 		$this->assertEquals( 'myTestField', $allowed_facets[1]['graphql_field_name'], 'The GraphQL field name should be overridden' );
 	}
-
 }

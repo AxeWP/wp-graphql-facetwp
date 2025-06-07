@@ -17,11 +17,10 @@ class FacetTestCase extends FWPGraphQLTestCase {
 	/**
 	 * Creates users and loads factories.
 	 */
-	public function setUp() : void {
+	public function setUp(): void {
 		parent::setUp();
 	}
 
-	
 	/**
 	 * Post test tear down.
 	 */
