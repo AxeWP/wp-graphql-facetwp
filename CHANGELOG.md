@@ -2,13 +2,17 @@
 
 ## [Unreleased]
 
+- dev: Add support for lazy-loading GraphQL descriptions and deprecation messages.
+- chore: Update Strauss to v0.22.2.
+- chore: Update Composer dependencies.
+- chore: Test compatibility with WordPress 6.8.1, WPGraphQL 2.3, and FacetWP 4.1
+- tests: Fix tests autoloader and format classes.
+
 ## v0.5.1
 
 This _minor_ release bumps the `tested up to` tags for WordPress v6.7.2 and WPGraphQL v2.0.
 
 It's also the first release in the new repository location at https://github.com/AxeWP/wp-graphql-facetwp, a change which should allow @justlevine to allocate significantly more resources to the plugin. Thanks @hsimah for your stewardship and hospitality 🙏.
-
-
 
 > [!IMPORTANT]
 > Vendor files are now .gitignored and must be built locally (`composer install`) for the plugin source code to work.
