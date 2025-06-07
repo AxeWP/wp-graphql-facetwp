@@ -6,7 +6,7 @@ modules:
   enabled:
     - Asserts
     - WPLoader
-    - \Helper\Wpunit
+    - \Tests\WPGraphQL\FacetWP\Helper\Wpunit
   disabled:
     - WPDb
     - WPBrowser

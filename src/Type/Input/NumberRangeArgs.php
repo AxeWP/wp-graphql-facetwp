@@ -35,11 +35,11 @@ class NumberRangeArgs extends InputType {
 		return [
 			'max' => [
 				'type'        => 'Int',
-				'description' => __( 'Maximum value', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Maximum value', 'wpgraphql-facetwp' ),
 			],
 			'min' => [
 				'type'        => 'Int',
-				'description' => __( 'Minimum value', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Minimum value', 'wpgraphql-facetwp' ),
 			],
 		];
 	}

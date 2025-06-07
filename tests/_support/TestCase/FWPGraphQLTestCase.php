@@ -19,8 +19,9 @@ class FWPGraphQLTestCase extends \Tests\WPGraphQL\TestCase\WPGraphQLTestCase {
 	/**
 	 * Creates users and loads factories.
 	 */
-	public function setUp() : void {
+	public function setUp(): void {
 		parent::setUp();
+
 		$this->clearFacets();
 		$this->clearSchema();
 
@@ -41,9 +42,9 @@ class FWPGraphQLTestCase extends \Tests\WPGraphQL\TestCase\WPGraphQLTestCase {
 		parent::tearDown();
 	}
 
-	public function register_facet( string $facet_type = 'checkbox', array $config = [] ) : array {
+	public function register_facet( string $facet_type = 'checkbox', array $config = [] ): array {
 		$method_name = 'get_default_' . $facet_type . '_facet_args';
-		$defaults = $this->tester->$method_name();
+		$defaults    = $this->tester->$method_name();
 
 		$config = array_merge( $defaults, $config );
 
@@ -52,7 +53,7 @@ class FWPGraphQLTestCase extends \Tests\WPGraphQL\TestCase\WPGraphQLTestCase {
 		return $config;
 	}
 
-	public function clearFacets() : void {
+	public function clearFacets(): void {
 		FWP()->helper->settings['facets'] = [];
 		unset( FWP()->facet->facets );
 

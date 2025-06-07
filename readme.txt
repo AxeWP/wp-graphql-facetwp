@@ -3,7 +3,7 @@ Contributors: hsimah, axepress, justlevine
 Tags: GraphQL, Headless, WPGraphQL, Facet, FacetWP,  WPGraphQL, FacetWP, React, Schema
 Requires at least: 5.4.1
 Requires PHP: 7.4
-Tested up to: 6.7.2
+Tested up to: 6.8
 Stable tag: 0.5.1
 Maintained at: https://github.com/AxeWP/wp-graphql-facetwp
 License: GPL-3

@@ -39,7 +39,7 @@ class Facet extends ObjectType implements TypeWithInterfaces {
 				'type'        => [
 					'list_of' => 'String',
 				],
-				'description' => __( 'Selected values', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Selected values', 'wpgraphql-facetwp' ),
 			],
 		];
 	}

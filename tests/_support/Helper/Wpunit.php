@@ -1,16 +1,14 @@
 <?php
-namespace Helper;
+namespace Tests\WPGraphQL\FacetWP\Helper;
 
 // here you can define custom actions
 // all public methods declared in helper class will be available in $I
 
-class Wpunit extends \Codeception\Module
-{
-	
+class Wpunit extends \Codeception\Module {
 	/**
 	 * Get the default checkbox facet args.
 	 */
-	public function get_default_checkbox_facet_args() : array {
+	public function get_default_checkbox_facet_args(): array {
 		return [
 			'count'           => '20',
 			'ghosts'          => 'no',
@@ -32,7 +30,7 @@ class Wpunit extends \Codeception\Module
 	/**
 	 * Get the default dropdown facet args.
 	 */
-	public function get_default_dropdown_facet_args() : array {
+	public function get_default_dropdown_facet_args(): array {
 		return [
 			'count'           => '10',
 			'hierarchical'    => 'no',
@@ -51,7 +49,7 @@ class Wpunit extends \Codeception\Module
 	/**
 	 * Get the default radio facet args.
 	 */
-	public function get_default_radio_facet_args() : array {
+	public function get_default_radio_facet_args(): array {
 		return [
 			'count'           => '10',
 			'ghosts'          => 'no',
@@ -71,7 +69,7 @@ class Wpunit extends \Codeception\Module
 	/**
 	 * Get the default fselect facet args.
 	 */
-	public function get_default_fselect_facet_args() : array {
+	public function get_default_fselect_facet_args(): array {
 		return [
 			'name'            => 'fselect',
 			'label'           => 'fSelect',
@@ -94,7 +92,7 @@ class Wpunit extends \Codeception\Module
 	/**
 	 * Get the default hierarchy facet args.
 	 */
-	public function get_default_hierarchy_facet_args() : array {
+	public function get_default_hierarchy_facet_args(): array {
 		return [
 			'count'           => '10',
 			'label_any'       => 'Any',
@@ -111,7 +109,7 @@ class Wpunit extends \Codeception\Module
 	/**
 	 * Get the default slider facet args.
 	 */
-	public function get_default_slider_facet_args() : array {
+	public function get_default_slider_facet_args(): array {
 		return [
 			'compare_type' => '',
 			'format'       => '0,0',
@@ -129,7 +127,7 @@ class Wpunit extends \Codeception\Module
 	/**
 	 * Get the default search facet args.
 	 */
-	public function get_default_search_facet_args() : array {
+	public function get_default_search_facet_args(): array {
 		return [
 			'auto_refresh'  => 'no',
 			'label'         => 'Search',
@@ -143,7 +141,7 @@ class Wpunit extends \Codeception\Module
 	/**
 	 * Get the default autocomplete facet args.
 	 */
-	public function get_default_autocomplete_facet_args() : array {
+	public function get_default_autocomplete_facet_args(): array {
 		return [
 			'label'       => 'Autocomplete',
 			'name'        => 'autocomplete',
@@ -156,7 +154,7 @@ class Wpunit extends \Codeception\Module
 	/**
 	 * Get the default date_range facet args.
 	 */
-	public function get_default_date_range_facet_args() : array {
+	public function get_default_date_range_facet_args(): array {
 		return [
 			'compare_type' => '',
 			'fields'       => 'both',
@@ -171,7 +169,7 @@ class Wpunit extends \Codeception\Module
 	/**
 	 * Get the default number_range facet args.
 	 */
-	public function get_default_number_range_facet_args() : array {
+	public function get_default_number_range_facet_args(): array {
 		return [
 			'compare_type' => '',
 			'fields'       => 'both',
@@ -186,7 +184,7 @@ class Wpunit extends \Codeception\Module
 	/**
 	 * Get the default rating facet args.
 	 */
-	public function get_default_rating_facet_args() : array {
+	public function get_default_rating_facet_args(): array {
 		return [
 			'label'  => 'StarRating',
 			'name'   => 'starrating',
@@ -198,7 +196,7 @@ class Wpunit extends \Codeception\Module
 	/**
 	 * Get the default proximity facet args.
 	 */
-	public function get_default_proximity_facet_args() : array {
+	public function get_default_proximity_facet_args(): array {
 		return [
 			'label'          => 'Proximity',
 			'name'           => 'proximity',
@@ -216,7 +214,7 @@ class Wpunit extends \Codeception\Module
 	/**
 	 * Get the default pager facet args.
 	 */
-	public function get_default_pager_facet_args() : array {
+	public function get_default_pager_facet_args(): array {
 		return [
 			'count_text_none'     => 'No results',
 			'count_text_plural'   => '[lower] - [upper] of [total] results',
@@ -239,7 +237,7 @@ class Wpunit extends \Codeception\Module
 	/**
 	 * Get the default reset facet args.
 	 */
-	public function get_default_reset_facet_args() : array {
+	public function get_default_reset_facet_args(): array {
 		return [
 			'auto_hide'    => 'no',
 			'label'        => 'Reset',
@@ -255,7 +253,7 @@ class Wpunit extends \Codeception\Module
 	/**
 	 * Get the default sort facet args.
 	 */
-	public function get_default_sort_facet_args() : array {
+	public function get_default_sort_facet_args(): array {
 		return [
 			'default_label' => 'Sort by',
 			'label'         => 'Sort_facet',

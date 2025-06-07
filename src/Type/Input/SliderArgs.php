@@ -35,11 +35,11 @@ class SliderArgs extends InputType {
 		return [
 			'max' => [
 				'type'        => 'Float',
-				'description' => __( 'Maximum value', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Maximum value', 'wpgraphql-facetwp' ),
 			],
 			'min' => [
 				'type'        => 'Float',
-				'description' => __( 'Minimum value', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Minimum value', 'wpgraphql-facetwp' ),
 			],
 		];
 	}

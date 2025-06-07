@@ -35,11 +35,11 @@ class DateRangeArgs extends InputType {
 		return [
 			'max' => [
 				'type'        => 'String',
-				'description' => __( 'The end date', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'The end date', 'wpgraphql-facetwp' ),
 			],
 			'min' => [
 				'type'        => 'String',
-				'description' => __( 'The start date', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'The start date', 'wpgraphql-facetwp' ),
 			],
 		];
 	}

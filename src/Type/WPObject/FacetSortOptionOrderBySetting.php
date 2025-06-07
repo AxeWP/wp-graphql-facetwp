@@ -35,11 +35,11 @@ class FacetSortOptionOrderBySetting extends ObjectType {
 		return [
 			'key'   => [
 				'type'        => 'String',
-				'description' => __( 'The orderby key.', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'The orderby key.', 'wpgraphql-facetwp' ),
 			],
 			'order' => [
 				'type'        => 'OrderEnum',
-				'description' => __( 'Sort order', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Sort order', 'wpgraphql-facetwp' ),
 			],
 		];
 	}

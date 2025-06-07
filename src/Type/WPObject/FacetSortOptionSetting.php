@@ -35,15 +35,15 @@ class FacetSortOptionSetting extends ObjectType {
 		return [
 			'label'   => [
 				'type'        => 'String',
-				'description' => __( 'Sort option label.', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Sort option label.', 'wpgraphql-facetwp' ),
 			],
 			'name'    => [
 				'type'        => 'String',
-				'description' => __( 'Sort option name', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Sort option name', 'wpgraphql-facetwp' ),
 			],
 			'orderby' => [
 				'type'        => [ 'list_of' => FacetSortOptionOrderBySetting::get_type_name() ],
-				'description' => __( 'The orderby rules for the sort option', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'The orderby rules for the sort option', 'wpgraphql-facetwp' ),
 			],
 		];
 	}

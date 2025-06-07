@@ -32,13 +32,13 @@ class SortFacetTest extends FWPGraphQLTestCase {
 		parent::tearDown();
 	}
 
-	protected function get_facet_config( array $overrides = [] ) : array {
+	protected function get_facet_config( array $overrides = [] ): array {
 		$default_config = $this->tester->get_default_sort_facet_args();
 
 		return array_merge( $default_config, $overrides );
 	}
 
-	protected function get_sort_option_orderby( string $type, string $order = 'DESC' ) : array {
+	protected function get_sort_option_orderby( string $type, string $order = 'DESC' ): array {
 		$possible_configs = [
 			'date'          => [
 				'key'   => 'date',
@@ -95,7 +95,7 @@ class SortFacetTest extends FWPGraphQLTestCase {
 		return $possible_configs[ $type ];
 	}
 
-	protected function generate_posts( int $amt, array $default_args = [] ) : array {
+	protected function generate_posts( int $amt, array $default_args = [] ): array {
 		$results      = [];
 		$default_args = array_merge(
 			[
@@ -118,7 +118,7 @@ class SortFacetTest extends FWPGraphQLTestCase {
 		return $results;
 	}
 
-	protected function get_query() : string {
+	protected function get_query(): string {
 		return '
 			query SortFacetQuery( $query: FacetQueryArgs ){
 				pageFacet( where: { query: $query } ) {
@@ -154,7 +154,7 @@ class SortFacetTest extends FWPGraphQLTestCase {
 		';
 	}
 
-	protected function assertValidSort( array $actual, string $key, string $direction ) : void {
+	protected function assertValidSort( array $actual, string $key, string $direction ): void {
 		for ( $i = 0; $i < count( $actual ); $i++ ) {
 			// Bail if we're at the end of the array.
 			if ( ! isset( $actual[ $i + 1 ] ) ) {
@@ -169,7 +169,7 @@ class SortFacetTest extends FWPGraphQLTestCase {
 		}
 	}
 
-	public function testSortFacet() : void {
+	public function testSortFacet(): void {
 		$sort_types = [
 			'date'       => 'date',
 			'ID'         => 'databaseId',
@@ -287,7 +287,7 @@ class SortFacetTest extends FWPGraphQLTestCase {
 		}
 	}
 
-	public function testMultiSortFacetByCommentCount() : void {
+	public function testMultiSortFacetByCommentCount(): void {
 		$comment_id_1 = $this->factory->comment->create( [ 'comment_post_ID' => $this->post_ids[3] ] );
 		$comment_id_2 = $this->factory->comment->create( [ 'comment_post_ID' => $this->post_ids[3] ] );
 		$comment_id_3 = $this->factory->comment->create( [ 'comment_post_ID' => $this->post_ids[7] ] );
@@ -376,7 +376,7 @@ class SortFacetTest extends FWPGraphQLTestCase {
 		wp_delete_comment( $comment_id_3, true );
 	}
 
-	public function testMultiSortFacetByCustomField() : void {
+	public function testMultiSortFacetByCustomField(): void {
 		// Update the post meta.
 		update_post_meta( $this->post_ids[3], 'test_meta', 'a' );
 		update_post_meta( $this->post_ids[7], 'test_meta', 'b' );
@@ -454,7 +454,7 @@ class SortFacetTest extends FWPGraphQLTestCase {
 		$this->assertGreaterThanOrEqual( $second_post_meta, $first_post_meta );
 	}
 
-	public function testSortFacetWithFacet() : void {
+	public function testSortFacetWithFacet(): void {
 		// Create test data.
 		$term_one_id = $this->factory()->term->create(
 			[
@@ -588,12 +588,11 @@ class SortFacetTest extends FWPGraphQLTestCase {
 		$this->assertValidSort( $posts, 'title', 'DESC' );
 	}
 
-	public function testMultiSortFacetQueryWithPostType() : void {
+	public function testMultiSortFacetQueryWithPostType(): void {
 		$this->markTestIncomplete( 'Facets are currently limited to a single post type.' );
 	}
 
-	public function testMultiSortFacetQueryWithPostIn() : void {
+	public function testMultiSortFacetQueryWithPostIn(): void {
 		$this->markTestIncomplete( 'Need to test the Proximity facet, or some other facet that relies on the sort facet.' );
 	}
-
 }

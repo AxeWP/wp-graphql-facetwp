@@ -35,23 +35,23 @@ class ProximityRadiusOptions extends EnumType {
 	public static function get_values(): array {
 		return [
 			WPEnumType::get_safe_name( '10' )  => [
-				'description' => __( 'Radius of 10', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Radius of 10', 'wpgraphql-facetwp' ),
 				'value'       => 10,
 			],
 			WPEnumType::get_safe_name( '25' )  => [
-				'description' => __( 'Radius of 25', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Radius of 25', 'wpgraphql-facetwp' ),
 				'value'       => 25,
 			],
 			WPEnumType::get_safe_name( '50' )  => [
-				'description' => __( 'Radius of 50', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Radius of 50', 'wpgraphql-facetwp' ),
 				'value'       => 50,
 			],
 			WPEnumType::get_safe_name( '100' ) => [
-				'description' => __( 'Radius of 100', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Radius of 100', 'wpgraphql-facetwp' ),
 				'value'       => 100,
 			],
 			WPEnumType::get_safe_name( '250' ) => [
-				'description' => __( 'Radius of 250', 'wpgraphql-facetwp' ),
+				'description' => static fn () => __( 'Radius of 250', 'wpgraphql-facetwp' ),
 				'value'       => 250,
 			],
 		];

@@ -12,6 +12,7 @@ class MainTest extends \Codeception\TestCase\WPTestCase {
 	public function setUp(): void {
 		// Before...
 		parent::setUp();
+
 		\WPGraphQL::clear_schema();
 
 		// Clear Plugin instance
@@ -42,6 +43,7 @@ class MainTest extends \Codeception\TestCase\WPTestCase {
 
 		$this->assertTrue( $this->instance instanceof Main );
 	}
+
 	/**
 	 * Test instance
 	 *

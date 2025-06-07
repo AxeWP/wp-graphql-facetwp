@@ -8,6 +8,7 @@
 
 namespace WPGraphQL\FacetWP\Type\Enum;
 
+use WPGraphQL\FacetWP\Vendor\AxeWP\GraphQL\Helper\Compat;
 use WPGraphQL\FacetWP\Vendor\AxeWP\GraphQL\Interfaces\GraphQLType;
 use WPGraphQL\FacetWP\Vendor\AxeWP\GraphQL\Interfaces\Registrable;
 use WPGraphQL\Type\WPEnumType;
@@ -62,7 +63,7 @@ class SortOptionsEnum implements GraphQLType, Registrable {
 
 			$values[ WPEnumType::get_safe_name( $option['name'] ) ] = [
 				'value'       => $option['name'],
-				'description' => sprintf(
+				'description' => static fn () => sprintf(
 					// translators: %s is the label of the sort option.
 					__( 'Sort by %s', 'wpgraphql-facetwp' ),
 					$option['label']
@@ -73,14 +74,17 @@ class SortOptionsEnum implements GraphQLType, Registrable {
 		// Register the enum type.
 		register_graphql_enum_type(
 			$name,
-			[
-				'description' => sprintf(
-					// translators: %s is the label of the facet.
-					__( 'Sort options for %s facet.', 'wpgraphql-facetwp' ),
-					$facet['label']
-				),
-				'values'      => $values,
-			]
+			// @todo Remove when WPGraphQL v2.3.0 is the minimum version.
+			Compat::resolve_graphql_config(
+				[
+					'description' => static fn () => sprintf(
+						// translators: %s is the label of the facet.
+						__( 'Sort options for %s facet.', 'wpgraphql-facetwp' ),
+						$facet['label']
+					),
+					'values'      => $values,
+				]
+			)
 		);
 
 		return $name;
