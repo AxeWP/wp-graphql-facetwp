@@ -348,7 +348,7 @@ class FacetRegistry {
 				[
 					'description' => static fn () => sprintf(
 						// translators: The GraphQL Field name.
-						__( 'Seleted facets for %s query', 'wpgraphql-facetwp' ),
+						__( 'Selected facets for %s query', 'wpgraphql-facetwp' ),
 						$field
 					),
 					'fields'      => $field_configs,
